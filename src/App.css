@@ -3,8 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Arial', sans-serif;
-  background-color: #e0f7fa;
+  font-family: 'Courier New', Courier, monospace; /* コマンドライン風のフォント */
+  background-color: #2e2e2e; /* 暗い背景色 */
+  color: #ffffff; /* 白いテキスト */
   min-height: 100vh;
   padding: 20px;
   margin: 0;
@@ -15,20 +16,38 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  background-color: #ffffff;
+  background-color: #1a1a1a; /* より暗い背景色 */
+  color: #ffffff; /* 白いテキスト */
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px; /* 少しシャープにする */
+  border: 1px solid #ffffff; /* 白いボーダー */
+  box-shadow: 0 0 10px #ffffff; /* 白いボックスシャドウ */
   width: 90%;
   max-width: 500px;
 }
 
 h1 {
-  color: #4CAF50;
+  color: #ffffff; /* 白いテキスト */
   text-align: center;
+  text-shadow: 0 0 5px #ffffff; /* テキストのシャドウで光っているように見せる */
 }
 
 h2 {
-  color: #388e3c;
+  color: #ffffff; /* 白いテキスト */
   text-align: center;
+  text-shadow: 0 0 5px #ffffff; /* テキストのシャドウで光っているように見せる */
+}
+
+新しく追加するスタイル
+input, label {
+  color: #ffffff; /* 白いテキスト */
+  background-color: #333333; /* 暗い背景色 */
+  border: 1px solid #ffffff; /* 白いボーダー */
+  border-radius: 3px; /* 少しシャープにする */
+  padding: 5px;
+  margin: 5px 0;
+}
+
+input::placeholder {
+  color: #aaaaaa; /* プレースホルダーの色をグレーに */
 }
