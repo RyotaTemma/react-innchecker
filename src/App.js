@@ -21,9 +21,9 @@ function App() {
     <div className="body">
       <Title />
       <div className="displaycontent">
-        <InputForm results={results} setResults={setResults} startValue={startValue} setStartValue={setStartValue} 
+        <InputForm results={results} setResults={setResults} startValue={startValue} setStartValue={setStartValue}
         combinedResults={combinedResults} setCombinedResults={setCombinedResults} diffs={diffs} setDiffs={setDiffs} latestStartValue={latestStartValue}/>
-        <ResultBar results={results} setResults={setResults} startValue={startValue} setStartValue={setStartValue} 
+        <ResultBar results={results} setResults={setResults} startValue={startValue} setStartValue={setStartValue}
         combinedResults={combinedResults} setCombinedResults={setCombinedResults} diffs={diffs} setDiffs={setDiffs} latestStartValue={latestStartValue}/>
       </div>
     </div>

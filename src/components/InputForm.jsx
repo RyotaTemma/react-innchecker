@@ -1,12 +1,11 @@
-import React from 'react'
-import "../InputForm.css"
+// src/components/InputForm.js
+import React from 'react';
+import "../InputForm.css";
 
-export const InputForm = ({ results, setResults, startValue, setStartValue, combinedResults, diffs, setDiffs, latestStartValue}) => {
-  // ディスプレイの表示を管理するステート
+export const InputForm = ({ results, setResults, startValue, setStartValue, combinedResults, diffs, setDiffs, latestStartValue }) => {
   const [display, setDisplay] = React.useState("0");
 
   const handleClick = (e) => {
-    // 初めに入力されるのが0の場合は、そのままで更新しない
     if (display === "0") {
       setDisplay(e.target.value);
     } else {
@@ -23,13 +22,13 @@ export const InputForm = ({ results, setResults, startValue, setStartValue, comb
   }
 
   const handleClickCheck = () => {
-    setResults([...results, { id: Date.now(), value: Number(display), source: "results"}]);
-    setDisplay("0"); // Reset the display to 0 after clicking check
+    setResults([...results, { id: Date.now(), value: Number(display), source: "results" }]);
+    setDisplay("0");
   }
 
   const startClick = () => {
-    setStartValue([...startValue, { id: Date.now(), value: Number(display), source: "startValue"}]);
-    setDisplay("0"); // Reset the display to 0 after clicking check
+    setStartValue([...startValue, { id: Date.now(), value: Number(display), source: "startValue" }]);
+    setDisplay("0");
   }
 
   const handleDelete = () => {
@@ -40,17 +39,12 @@ export const InputForm = ({ results, setResults, startValue, setStartValue, comb
   const handleLineDelete = () => {
     const lastElement = combinedResults[combinedResults.length - 1];
     if (lastElement.source === "results") {
-      // The last element came from results
       setResults(results.slice(0, -1));
       setDiffs(diffs.slice(0, -1));
     } else if (lastElement.source === "startValue") {
-      // The last element came from startValue
       setStartValue(startValue.slice(0, -1));
     }
-    // console.log(combinedResults);
   }
-
-  // console.log(results);
 
   return (
     <div>
@@ -85,7 +79,7 @@ export const InputForm = ({ results, setResults, startValue, setStartValue, comb
         </div>
         <div className="number-button">
           <button onClick={() => handleLineDelete()}>
-            一行<br/>削除
+            一行<br />削除
           </button>
         </div>
         <div className="number-button">
